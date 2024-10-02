@@ -340,14 +340,8 @@
     {
       "title": "Allure: Base Makeup Product Winners 2024",
       "link": "https://www.allure.com/story/best-of-beauty-base-makeup-product-winners-2024",
-      "keywords": [
-        "Beauty",
-        "Makeup",
-        "Awards"
-      ],
-      "creator": [
-        "Marci Robin"
-      ],
+      "keywords": ["Beauty", "Makeup", "Awards"],
+      "creator": ["Marci Robin"],
       "video_url": null,
       "description": "Explore the winners of Allure's Best of Beauty awards in base makeup for 2024.",
       "content": null,
@@ -355,15 +349,10 @@
       "full_description": null,
       "image_url": "https://media.allure.com/photos/66eb86dc230c281df9fa3ba3/16:9/w_2560%2Cc_limit/Allure_BoB_Still_Life_2024_Base.jpg",
       "source_id": "allure",
-      "country": [
-        "united states of america"
-      ],
-      "category": [
-        "beauty"
-      ],
+      "country": ["united states of america"],
+      "category": ["beauty"],
       "language": "english"
-    },
-    {
+    }, {
       "title": "New Glossier You Perfumes",
       "link": "https://www.cosmopolitan.com/uk/beauty-hair/fragrance/a62381833/new-glossier-you-perfumes/",
       "keywords": [
@@ -388,6 +377,6 @@
         "beauty"
       ],
       "language": "english"
-    }
+    }    
   ]
 }

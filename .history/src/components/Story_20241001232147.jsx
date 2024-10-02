@@ -6,9 +6,9 @@ const Story = ({ story, deleteStory }) => {
       <span className="delete" onClick={() => deleteStory(story.title)}>x</span>
       <div className="story_header">
         <div className="story_image">
-          <img
-            src={story.image_url || "https://placehold.co/600x400?text=News+Story"}
-            alt={story.title}
+          <img 
+            src={story.image_url || "https://placehold.co/600x400?text=News+Story"} 
+            alt={story.title} 
           />
         </div>
         <h1>

@@ -14,10 +14,10 @@ function App() {
       <h1>Makeup, Skincare, and Fashion News</h1>
       <div className="feed">
         {stories.map((story) => (
-          <Story
-            key={story.title}
-            story={story}
-            deleteStory={deleteStory}
+          <Story 
+            key={story.title} 
+            story={story} 
+            deleteStory={deleteStory} 
           />
         ))}
       </div>
