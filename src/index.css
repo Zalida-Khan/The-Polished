@@ -1,95 +1,222 @@
-.App {
-  padding: 20px;
-  max-width: 80%;
-  margin: auto;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@font-face {
+  font-family: "Hornbill";
+  src: url("./fonts/Hornbill Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App > h1 {
+.App {
+  padding: 25px;
+  max-width: 70%;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.App h1 {
+  color: #013e80;
+  margin-bottom: 40px;
+  position: relative;
   text-align: center;
-  font-family: "Arial", sans-serif;
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 20px;
+}
+
+.App > h1::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #007bff;
+  margin: auto;
+  border-radius: 2px;
+}
+
+.news-heading {
+  font-family: "Hornbill";
+  font-size: 2.8em;
+  color: #013e80;
+}
+
+.App h2 {
+  font-size: 1.6em;
+  color: #444;
+  margin: 1em 0;
 }
 
 .feed {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
-}
-
-.story {
-  position: relative;
-  padding: 1.5em;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.story:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.story span.delete {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  text-align: center;
-  line-height: 1.5;
-  top: 0;
-  right: 0;
-  background: red;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 50%;
-  border: none;
+  gap: 2em;
 }
 
 .story_header {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 1em;
 }
 
 .story_header h1 {
   margin: 0;
   padding: 0;
-  font-size: 1.5em;
-  font-family: "Arial", sans-serif;
+  padding-right: 1em;
+  font-size: 1.8em;
+  font-family: "Georgia", serif;
+  text-align: left;
   color: #007bff;
 }
 
-.story_header h1 > a {
+.story_header h1 a {
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
-.story_header h1 > a:hover {
-  color: #0056b3;
+.story_header h1 a:hover {
+  color: #013e80;
+}
+
+.story {
+  position: relative;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.story:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.story span.delete {
+  position: absolute;
+  font-family: "Tahoma", sans-serif;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  top: 15px;
+  right: 15px;
+  background: #ff4d4d;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.story span.delete:hover {
+  background: #d21616;
 }
 
 .story_creator {
-  display: block;
-  font-size: 0.9rem;
+  font-size: 0.967rem;
   color: #666;
-  margin-top: 0.5em;
+  margin-top: 0.2em;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  margin: 0.5em 0;
 }
 
 .story_image {
-  max-width: 25%;
-  position: relative;
+  display: flex;
 }
 
 .story_image img {
-  width: 290px;
+  width: 300px;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  object-position: 100%;
+}
+
+.description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 2em;
+  font-weight: 300;
+}
+
+.description::before {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 3px;
+  background: #007bff;
+}
+
+.footer {
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f7f7;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .story_image img {
+    width: 385px;
+    height: 250px;
+  }
+
+  .story_image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .App {
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .news-heading {
+    font-size: 2.4rem;
+  }
+
+  .story_header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    overflow-wrap: break-word;
+  }
+
+  .story_header h1 {
+    padding: 15px;
+    padding-top: 5px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .story_creator {
+    font-size: 0.879rem;
+    margin: 0.2em 0;
+    align-items: center;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .description::before {
+    width: 73%;
+    margin: 5px auto;
+  }
+
+  .story {
+    padding: 1.5em;
+  }
+
+  .story span.delete {
+    text-shadow: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
 }
